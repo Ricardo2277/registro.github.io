@@ -1,0 +1,345 @@
+/* tipografia */
+@font-face {
+  font-family: Ciber;
+  src: url(..//fonts/Aldrich-Regular.ttf);
+}
+@font-face {
+  font-family: Parr-TL ;
+  src: url(..//fonts/TitilliumWeb-Regular.ttf);
+}
+
+/* todo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Ciber;
+  }
+/* cabeza */
+  header{
+    top: 0% ;           /* Pegada al top */
+    position: fixed;   /*  Flotante */
+    width: 100%;
+    height: 110px;
+    padding-top: 0.5%;
+    /* background-color: rgb(165, 42, 42); */
+    background: linear-gradient(#000000,transparent);
+    display: flex;
+}
+.barra{
+
+    width: 100%;
+    height: 75px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.menu-amb{
+  display: none; 
+}
+.cerrar-amb{
+  display: none; 
+}
+
+.logo{
+  height: 65px;
+  margin-left: 2%;
+  background: transparent;
+}
+
+.menu a{
+  /* background: transparent; */
+  
+  /* font-size: 16px; */
+  transition: color 0.4s;   /* Alentar el tiempo de transicion hacia el hover */
+  padding:0 15px;
+  text-decoration: none; /* QUITAR LINEA */
+  /* transform: scale(10%); */
+}
+.login a:hover .menu a:hover{
+  
+  color: rgb(246, 107, 14);
+/*   font-size: 17px; */
+  
+  
+}
+.barra .login{
+  display: flex;
+  position: absolute;
+  right: 0%;    
+  margin-right: 2%;
+  background: transparent;
+  align-items: center;
+  gap: 12px;  /* Observar posible cambio a porcentaje a futuro o creacion de div entre elementos */
+  
+}
+
+.login img{
+width: 20px;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+  /* cuerpo */
+  body{
+    background-image: url('fondo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .form-register {
+    text-align: center;
+    width: 500px;
+    background: #000000;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #4d3f3f;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FF5C00;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+  }
+
+  @media (max-width:768px){
+      .form-register .controls {
+        width:80%;
+      }
+  }
+
+  
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .form-register .botons {
+    width: 30%;
+    background: #ff5c00;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-register .chek{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+
+@media (max-width:768px){ 
+    .form-register .botons{
+        width: 80%;
+    }
+}
+/* -------------------------------------------------------------------------- */
+
+
+
+/* pie */
+footer{
+  width: 100%;
+  height: 550px;
+  background-color: #1f1f1f;
+
+}
+
+@media(max-width:768px){
+  .footer{
+      width: 31.5rem;
+  }
+}
+footer div{
+    display: flex;
+    justify-content: center ;
+    
+    
+}
+footer .logo-f{
+    /* background-color: aqua; */
+    padding-top: 2rem;
+}
+footer .redes-s{
+    /* background-color: yellowgreen; */
+    align-items: center;
+    gap: 1rem;
+}
+footer .listas{
+    
+    /* background-color: coral; */
+    line-height: 2rem;  /* Espaciado en renglones horizontal */
+    justify-content: center;
+    gap: 3%;
+    font-size: 20px;
+    
+    
+}
+footer ul{
+    list-style: none;
+}
+footer .sub-li{
+    font-family: Parr-TL;
+    font-size: 14px;
+    
+}
+footer .listas a{
+ text-decoration: none;   
+}
+
+/*---------------------- MENU RESPONSIVO  900px--------------------------*/
+
+@media(max-width: 900px){    
+  .barra{
+      flex-direction: column;
+  }
+  .menu-amb{
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 30px;
+      display:unset;
+      cursor: pointer;
+      transition: 0.15s;
+  }
+  .menu-amb:hover{
+      width: 40px;   
+  }
+  .menu{
+      display: flex;
+      flex-direction: column;
+      line-height: 50px;
+      transition: 0.2s;
+      width: 50%;   
+      background-color:chocolate;
+      position: absolute;
+      left: 15px;
+      top: 65px;
+      opacity: 0.9;
+  }
+  .menu a:hover{
+      color:#000000;
+  }
+  h1{
+      display: none;
+  }
+  .login{
+      right: 15px;
+      top: 20px;
+  }
+  .login img{
+      transition: 0.2s;
+  }
+  .login img:hover{
+      width: 30px;
+  }
+  .sec-1 .slider{
+      background-position: center;
+      height: 400px;
+  }
+   #inp-amb:checked ~.menu{
+      width: 0%;  
+      font-size: 0;
+  } 
+  .sub-t{
+      font-size: 35px;
+  }
+  .texto{
+      font-size: 18px;
+  }
+}
+
+
+/*---------------------- MENU RESPONSIVO  500px--------------------------*/
+
+@media(max-width: 500px){
+ 
+  .logo{
+      height: 50px;
+      padding-top: 5px;
+  }
+  .header{
+      height: 70px;
+  }
+  .menu{
+      width: 93%;
+  }
+   #inp-amb:checked ~.menu{
+      width: 0%;  
+      font-size: 0;
+  }
+  .sub-t{
+      color: aqua;
+      font-size: 25px;
+  }
+  .texto{
+      font-size: 14px;
+      text-align:center;
+  }
+  .footer{
+      
+      grid-template-rows: 50px 50px 450px;
+      height: 800px;
+      justify-content: center;   
+  }
+  .footer li{
+      font-size: 18px;
+      width: 100%;
+      color:chocolate;
+  }
+  .footer .sub-li
+  {
+      font-size: 14px;
+  }
+  .footer .logo-f{
+      padding-top: 10px;
+  }
+  .footer .logo-f img{
+      width: 40px;
+  }
+  
+  .footer .listas{
+      flex-direction: column;
+      align-items:center;
+      line-height: 1.5rem;
+  }
+  .footer ul{
+      text-align: center;
+  }
+}
